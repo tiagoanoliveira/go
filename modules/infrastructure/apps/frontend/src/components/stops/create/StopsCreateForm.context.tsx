@@ -81,7 +81,7 @@ export function StopsCreateFormContextProvider({ children }: PropsWithChildren) 
 			form.reset();
 			unblock();
 			closeStopsCreateModal();
-			window.location.href = keepUrlParams(PAGE_ROUTES.infrastructure.STOPS_DETAIL(String(response.data._id)));
+			window.location.href = keepUrlParams(PAGE_ROUTES.infrastructure.STOPS_DETAIL(response.data._id));
 		},
 	});
 
