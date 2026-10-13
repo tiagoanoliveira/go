@@ -82,7 +82,6 @@ export async function handleSyncRawVehicleEventsIntoSimplifiedVehicleEvents({ ba
 	// for the current timestamp chunk.
 
 	const rawdbQuery: Filter<VehicleEventsCollectionDocument<SyncConfig['collection']>> = {
-		agency_id: configItem.agency_id,
 		created_at: {
 			$gte: timeChunk.start,
 			$lt: timeChunk.end,
