@@ -200,7 +200,7 @@ export function MapOverlayPatternShape({
 	const thicknessConfig = THICKNESS_CONFIG[thickness];
 
 	const mapViewContext = useMapViewContext();
-	const primaryHexColor = useCssVariable('--color-primary');
+	const primaryHexColor = useCssVariable('--color-primary') || '#000000';
 	const normalizedLineData = useMemo(() => normalizePatternShapeLineData(lineData), [lineData]);
 
 	const anchorPreviewLayerId = useMemo(
@@ -1018,7 +1018,7 @@ export function MapOverlayPatternShape({
 						layout={{
 							'text-anchor': 'center',
 							'text-field': ['get', 'sequence'],
-							'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
+							'text-font': ['Noto Sans Bold'],
 							'text-offset': [0, 0],
 							'text-size': zoomInterpolate(
 								thicknessConfig.label[0],
